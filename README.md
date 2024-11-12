@@ -1,7 +1,7 @@
 # AzureResume
 My own Azure resume, following [ACG project video](https://learn.acloud.guru/series/acg-projects/view/403).
 
-![architecture](https://imgur.com/a/mZgffyo)
+[architecture](https://imgur.com/a/mZgffyo)
 
 ## Prerequisites needed for this project.
 
