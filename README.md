@@ -22,9 +22,9 @@ My own Azure resume, following [ACG project video](https://learn.acloud.guru/ser
 - `.devcontainer`: Folder contains the my container configuration for VS Code.
 
 ## First Steps
-- Created Repository in github
-- Set up SSH key to clone repositories
-- 
+- Created Repository in Github
+- Set up SSH key in Github
+- Clone repository
 
 ## Second Steps
 - Created Azure Resource Group in Azure portal.
