@@ -3,6 +3,8 @@ My own Azure resume, following [ACG project video](https://learn.acloud.guru/ser
 
 <img src="https://imgur.com/Kd3yFgI.png" height="80%" width="80%" alt="Architechture"/>
 
+## My Azure Resume Website 
+[Denise's Resume](https://azureresumestorageac-secondary.z13.web.core.windows.net)
 
 ## Prerequisites needed for this project.
 
