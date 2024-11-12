@@ -1,5 +1,5 @@
 name: deploy_frontend
-# Deploys when a push is made from the frontend folder
+# Deploys when a push is made to the frontend folder
 
 on:
   push:
@@ -11,27 +11,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4   # Updated to the latest version
-    - uses: azure/login@v1.4      # Update to the latest compatible version
-      with:
+      - uses: actions/checkout@v3
+      - uses: azure/login@v1
+        with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Upload to blob storage
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
             az storage blob upload-batch --account-name <azureresumestorageac> --auth-mode key -d '$web' -s frontend/
-            
-    # Commented out the CDN purge, as it's not needed if there's no CDN endpoint
-    # - name: Purge CDN endpoint
-    #   uses: azure/CLI@v1
-    #   with:
-    #     inlineScript: |
-    #       az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "azresume-rg"
 
-    # Azure logout
-    - name: Logout
-      run: |
+      # Azure logout
+      - name: logout
+        run: |
           az logout
-      if: always()
-      
+        if: always()
